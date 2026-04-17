@@ -3,13 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import numpy as np
 import pandas as pd
-from tensorflow.keras.models import load_model
+import load_model
 import joblib
 
 # ==============================
 # 1. LOAD MODEL AND SCALER
 # ==============================
-MODEL_PATH = "results/ann_model.keras"
+MODEL_PATH = "results/ann_model.pkl"
 SCALER_PATH = "results/scaler.save"
 
 # ✅ FIX: compile=False (avoid keras error)
