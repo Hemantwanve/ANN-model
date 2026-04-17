@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import numpy as np
 import pandas as pd
-import load_model
 import joblib
 
 # ==============================
@@ -13,7 +12,7 @@ MODEL_PATH = "results/ann_model.pkl"
 SCALER_PATH = "results/scaler.save"
 
 # ✅ FIX: compile=False (avoid keras error)
-model = load_model(MODEL_PATH, compile=False)
+model = joblib.load(MODEL_PATH, compile=False)
 scaler = joblib.load(SCALER_PATH)
 
 # Set your model accuracy
