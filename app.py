@@ -12,7 +12,7 @@ MODEL_PATH = "results/ann_model.pkl"
 SCALER_PATH = "results/scaler.save"
 
 # ✅ FIX: compile=False (avoid keras error)
-model = joblib.load(MODEL_PATH, compile=False)
+model = joblib.load(MODEL_PATH)
 scaler = joblib.load(SCALER_PATH)
 
 # Set your model accuracy
