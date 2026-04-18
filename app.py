@@ -9,8 +9,8 @@ import joblib
 # ==============================
 # 1. LOAD MODEL AND SCALER
 # ==============================
-MODEL_PATH = "results/ann_model.keras"
-SCALER_PATH = "results/scaler.save"
+MODEL_PATH = "ann_model.keras"
+SCALER_PATH = "scaler.save"
 
 # ✅ FIX: compile=False (avoid keras error)
 model = load_model(MODEL_PATH, compile =False)
